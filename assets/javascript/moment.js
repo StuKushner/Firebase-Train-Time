@@ -19,6 +19,9 @@
   	var firstTrainTime = moment($("#train-time").val().trim(), "HH:mm").format("HH:mm");
   	var frequency = $("#frequency").val().trim();
 
+    var result = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(firstTrainTime);
+    console.log(result);
+
 
     var newTrain = {
       name: trainName,
